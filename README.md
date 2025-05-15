@@ -55,3 +55,18 @@ Para la autorización se utiliza [jcasbin](https://casbin.org/) y los archivos d
 
 
 > Note: _La autorización esta implementada manualmente (no con casbin)_
+
+#### Levantar el sistema con Docker
+
+1.- docker compose build
+2.- docker compose up
+
+Esto levanta:
+
+* PostgreSQL (puerto 5432)
+
+* Quarkus dev en http://localhost:8085
+
+#### Verificación
+
+* http://localhost:8085/q/health
