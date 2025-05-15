@@ -1,0 +1,35 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: assist-core-register-dev
+    ports:
+      - "8085:8081"
+    volumes:
+      - .:/app
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=assist-control-register
+      - DB_USER=postgres
+      - DB_PASS=12345
+      - quarkus.profile=local
+    depends_on:
+      - db
+  db:
+    image: postgres:17
+    container_name: postgres-register
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: assist-control-register
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

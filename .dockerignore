@@ -1,0 +1,19 @@
+
+target/
+
+# Archivos temporales o innecesarios
+*.log
+*.tmp
+*.swp
+
+# docker-compose override local
+docker-compose.override.yml
+
+# VS CODE
+.vscode/
+
+# Sistema operativo
+.DS_Store
+
+# IDEA
+idea/
