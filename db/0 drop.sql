@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS job_scheduler;
+DROP TABLE IF EXISTS job_type;
+DROP TABLE IF EXISTS branch;
+DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS commune;
+DROP TABLE IF EXISTS city;
+DROP TABLE IF EXISTS contract_type;
+DROP TABLE IF EXISTS region;
+DROP TABLE IF EXISTS country;
+DROP TABLE IF EXISTS gender;
+DROP TABLE IF EXISTS marital_status;
+DROP TABLE IF EXISTS register;
+
+--     borrar cuando lo ocupe el team
+DROP TABLE IF EXISTS app_user;
+DROP TABLE IF EXISTS type_user;
